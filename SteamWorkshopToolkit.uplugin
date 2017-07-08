@@ -2,17 +2,16 @@
 	"FileVersion": 3,
 	"Version": 1,
 	"VersionName": "1.0",
-	"FriendlyName": "Steamworks",
-	"Description": "Steamworks implementation for C++ and blueprints",
+	"FriendlyName": "SteamWorkshopToolkit",
+	"Description": "A tool for creating content for ProxyWar VR.",
 	"Category": "Other",
-	"CreatedBy": "davevillz",
-	"CreatedByURL": "https://github.com/davevill",
+	"CreatedBy": "SlimeQ",
+	"CreatedByURL": "",
 	"DocsURL": "",
 	"MarketplaceURL": "",
 	"SupportURL": "",
-	"EnabledByDefault": false,
-	"CanContainContent": false,
-	"IsBetaVersion": true,
+	"CanContainContent": true,
+	"IsBetaVersion": false,
 	"Installed": false,
 	"Modules": [
 		{
@@ -24,6 +23,11 @@
 			"Name": "OnlineSubsystemSteam",
 			"Type": "Runtime",
 			"LoadingPhase": "PreDefault"
+		},
+		{
+			"Name": "SteamWorkshopToolkit",
+			"Type": "Editor",
+			"LoadingPhase": "PostEngineInit"
 		}
 	]
 }

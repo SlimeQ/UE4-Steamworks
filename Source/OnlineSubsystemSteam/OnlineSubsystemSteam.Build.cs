@@ -7,12 +7,20 @@ using System;
 
 public class OnlineSubsystemSteam : ModuleRules
 {
-	public OnlineSubsystemSteam(TargetInfo Target)
+	public OnlineSubsystemSteam(ReadOnlyTargetRules Target) : base(Target)
 	{	
 		PublicDependencyModuleNames.AddRange(
 			new string[]
 			{
-				"Core", "CoreUObject", "Engine", "InputCore", "Steamworks", "OnlineSubsystem", "OnlineSubsystemUtils", "OnlineSubsystemNull", "Sockets"
+				"Core",
+                "CoreUObject",
+                "Engine",
+                "InputCore",
+                "Steamworks",
+                "OnlineSubsystem",
+                "OnlineSubsystemUtils",
+                "OnlineSubsystemNull",
+                "Sockets"
             }
 		);		
 		

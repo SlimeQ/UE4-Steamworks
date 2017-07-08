@@ -18,7 +18,7 @@ public class Steamworks : ModuleRules
     }
 
 
-	public Steamworks(TargetInfo Target)
+	public Steamworks(ReadOnlyTargetRules Target) : base(Target)
 	{
 		
 		PublicIncludePaths.AddRange(
@@ -40,7 +40,14 @@ public class Steamworks : ModuleRules
 		PublicDependencyModuleNames.AddRange(
 			new string[]
 			{
-				"Core", "CoreUObject", "Engine", "InputCore", "OnlineSubsystem", "OnlineSubsystemUtils", "OnlineSubsystemNull", "Sockets"
+				"Core",
+                "CoreUObject",
+                "Engine",
+                "InputCore",
+                "OnlineSubsystem",
+                "OnlineSubsystemUtils",
+                "OnlineSubsystemNull",
+                "Sockets"
             }
 		);
 			
@@ -68,7 +75,7 @@ public class Steamworks : ModuleRules
 		LoadSteamworks(Target);
 	}
 
-	public bool LoadSteamworks(TargetInfo Target)
+	public bool LoadSteamworks(ReadOnlyTargetRules Target)
     {
 		bool is64bit = (Target.Platform == UnrealTargetPlatform.Win64);
         bool isLibrarySupported = false;
